@@ -4,7 +4,12 @@
 import * as React from 'react'
 
 const loadGlobe = () => {
-  import('../globe')
+  // 📒NOTE: will still show up in network request, but will show as pre-fetch
+
+  import(
+    /* webpackPrefetch: true */
+    '../globe'
+  )
 }
 
 // 🐨 use React.lazy to create a Globe component which uses a dynamic import
